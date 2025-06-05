@@ -26,31 +26,24 @@ export default function BalanceCard({ balance, setBalance }: BalanceCardProps) {
     };
 
     return (
-        <div
-            className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-sm border border-gray-200 dark:border-gray-700"
-            data-oid="jq3zsr4"
-        >
-            <div className="flex justify-between items-center mb-2" data-oid="d4wovje">
-                <h2
-                    className="text-sm font-medium text-gray-600 dark:text-gray-400"
-                    data-oid="l.lca:."
-                >
+        <div className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-sm border border-gray-200 dark:border-gray-700">
+            <div className="flex justify-between items-center mb-2">
+                <h2 className="text-sm font-medium text-gray-600 dark:text-gray-400">
                     Current Balance
                 </h2>
                 {!isEditing && (
                     <button
                         onClick={() => setIsEditing(true)}
                         className="p-1 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
-                        data-oid=".87cooz"
                     >
-                        <Edit2 size={16} data-oid="k87-e:f" />
+                        <Edit2 size={16} />
                     </button>
                 )}
             </div>
 
             {isEditing ? (
-                <div className="flex items-center space-x-2" data-oid="9usxjf1">
-                    <div className="flex-1" data-oid="h8r9es3">
+                <div className="flex items-center space-x-2">
+                    <div className="flex-1">
                         <input
                             type="number"
                             value={editValue}
@@ -59,26 +52,23 @@ export default function BalanceCard({ balance, setBalance }: BalanceCardProps) {
                             placeholder="0.00"
                             step="0.01"
                             min="0"
-                            data-oid="yfdh-vb"
                         />
                     </div>
                     <button
                         onClick={handleSave}
                         className="p-1 text-green-600 hover:text-green-700 transition-colors"
-                        data-oid="8ywed83"
                     >
-                        <Check size={20} data-oid="bn2ert5" />
+                        <Check size={20} />
                     </button>
                     <button
                         onClick={handleCancel}
                         className="p-1 text-red-600 hover:text-red-700 transition-colors"
-                        data-oid="rxs_xov"
                     >
-                        <X size={20} data-oid="eqjp9n_" />
+                        <X size={20} />
                     </button>
                 </div>
             ) : (
-                <p className="text-3xl font-bold text-gray-900 dark:text-white" data-oid="t7b7ejf">
+                <p className="text-3xl font-bold text-gray-900 dark:text-white">
                     ₱{balance.toFixed(2)}
                 </p>
             )}
