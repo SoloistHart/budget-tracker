@@ -1,27 +1,14 @@
 'use client';
 
-import Image from 'next/image';
+import BudgetTracker from '@/components/BudgetTracker';
 
 export default function Page() {
     return (
         <div
-            className="w-full min-h-screen flex items-center justify-center bg-white dark:bg-black transition-colors duration-200 flex-col p-4 gap-[32px]"
-            data-oid="cb961d2"
+            className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-200"
+            data-oid="9.g.7oh"
         >
-            <div className="text-center text-gray-900 dark:text-gray-100 p-4" data-oid="9ti0oxp">
-                <h1
-                    className="text-4xl md:text-5xl font-semibold mb-4 tracking-tight"
-                    data-oid="_hmprpr"
-                >
-                    Welcome to your new Onlook website
-                </h1>
-                <p
-                    className="text-xl md:text-2xl text-gray-800 dark:text-gray-300"
-                    data-oid="zqvgl_f"
-                >
-                    This is a blank template – Feel free to edit it!
-                </p>
-            </div>
+            <BudgetTracker data-oid="b-xjeiv" />
         </div>
     );
 }
